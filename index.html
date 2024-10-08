@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarks Lookalike</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Clarks</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#men">Men</a></li>
+                <li><a href="#women">Women</a></li>
+                <li><a href="#kids">Kids</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Step into Comfort</h1>
+            <p>Discover our latest collection of stylish and comfortable shoes.</p>
+            <a href="#shop" class="cta-button">Shop Now</a>
+        </section>
+
+        <section id="featured-items">
+            <h2>Featured Items</h2>
+            <div id="items-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Clarks has been making shoes since 1825, combining modern style with exceptional comfort.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#men">Men</a></li>
+                    <li><a href="#women">Women</a></li>
+                    <li><a href="#kids">Kids</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@clarks.com</p>
+                <p>Phone: 1-800-CLARKS</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Clarks Lookalike. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script id="item-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <div class="item">
+            <img src="{{image}}" alt="{{name}}">
+            <h3>{{name}}</h3>
+            <p class="price">${{price}}</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
